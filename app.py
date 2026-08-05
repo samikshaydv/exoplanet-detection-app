@@ -1,9 +1,10 @@
+import sys
 import streamlit as st
 import subprocess
 import plotly.graph_objects as go
 import numpy as np
 import pandas as pd
-import sys
+
 
 # -------------------------
 # Load Dataset
@@ -83,7 +84,7 @@ if st.button("🔍 Predict"):
     with st.spinner("Running Hybrid CNN + BiLSTM Model..."):
 
         result = subprocess.run(
-            ["sys.executable", "predict_exoplanet.py"],
+            [sys.executable, "predict_exoplanet.py"],
             input=str(star),
             text=True,
             capture_output=True
