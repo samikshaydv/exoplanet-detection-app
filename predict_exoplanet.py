@@ -12,8 +12,8 @@ model = load_model("models/hybrid_exoplanet_model.keras")
 # ============================================================
 # Load Datasets
 # ============================================================
-train = pd.read_csv("dataset/exoTrain.csv")
-test = pd.read_csv("dataset/exoTest.csv")
+train = pd.read_csv("dataset/exoTrain_small.csv")
+test = pd.read_csv("dataset/exoTest_small.csv")
 
 # ============================================================
 # Separate Features and Labels
@@ -78,7 +78,7 @@ while True:
         if 0 <= star_index < len(X_test_scaled):
             break
         else:
-            print("Please enter a number between 0 and 569.")
+            print("Please enter a number between 0 and 399.")
 
     except ValueError:
         print("Please enter a valid integer.")
