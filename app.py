@@ -7,7 +7,7 @@ import pandas as pd
 # -------------------------
 # Load Dataset
 # -------------------------
-test = pd.read_csv("dataset/exoTest.csv")
+test = pd.read_csv("dataset/exoTest_small.csv")
 X_test = test.drop("LABEL", axis=1)
 
 # -------------------------
@@ -70,7 +70,7 @@ st.write("---")
 star = st.slider(
     "Select Star Index",
     min_value=0,
-    max_value=569,
+    max_value=399,
     value=0
 )
 # -------------------------
